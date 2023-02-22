@@ -14,9 +14,8 @@
     "clean": "rm -rf www/ || true",
     "setEnv":"chmod +x bin/setenv.sh && bin/setenv.sh", 
     "deploy-old": "npm run build && eb list && eb use udagram-api-env && npm run setEnv && eb deploy ",
-    "deploy": "npm run build && eb list && eb use udagram-api-env && echo 'eb use env successfully' && echo ' eb deploy start ' && eb deploy",
-    "build-old": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip .",
-    "build": "npm install . && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip .",
+    "deploy": "npm run build && npm install . && eb list && eb use udagram-api-env && echo 'eb use env successfully' && echo ' eb deploy start ' && eb deploy",
+    "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip .",
     "buildMe": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
