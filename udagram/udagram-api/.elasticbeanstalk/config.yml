@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: Backendudacityfoula-env
+    environment: udagram-api-env
 environment-defaults:
   Backendudacityfoula-env:
     branch: null
@@ -8,7 +8,7 @@ environment-defaults:
 deploy:
   artifact: www/Archive.zip
 global:
-  application_name: backend.udacity.foula
+  application_name: udagram-api
   default_ec2_keyname: null
   default_platform: Node.js 14 running on 64bit Amazon Linux 2
   default_region: us-east-1
